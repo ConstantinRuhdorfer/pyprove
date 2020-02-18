@@ -5,14 +5,19 @@ STATUS_OUT = ['ResourceOut', 'GaveUp']
 STATUS_ALL = STATUS_OK + STATUS_OUT
 
 PATS = {
-   "RUNTIME":   re.compile(r"^\s*(\d*\.\d*)\s*task-clock:u"),
-   "USERTIME":  re.compile(r"^# User time\s*: (\S*) s"),
-   "MILINS":    re.compile(r"^\s*([0-9,]*)\s*instructions:u"),
-   "STATUS":    re.compile(r"^# SZS status (\S*)"),
-   "PROCESSED": re.compile(r"^# Processed clauses\s*: (\S*)"),
-   "GENERATED": re.compile(r"^# Generated clauses\s*: (\S*)"),
-   "PROOFLEN":  re.compile(r"^# Proof object total steps\s*: (\S*)"),
-   "PRUNED":    re.compile(r"^# Removed by relevancy pruning/SinE\s*: (\S*)")
+   "RUNTIME":                      re.compile(r"^\s*(\d*\.\d*)\s*task-clock:u"),
+   "USERTIME":                     re.compile(r"^# User time\s*: (\S*) s"),
+   "MILINS":                       re.compile(r"^\s*([0-9,]*)\s*instructions:u"),
+   "STATUS":                       re.compile(r"^# SZS status (\S*)"),
+   "PROCESSED":                    re.compile(r"^# Processed clauses\s*: (\S*)"),
+   "GENERATED":                    re.compile(r"^# Generated clauses\s*: (\S*)"),
+   "PROOFLEN":                     re.compile(r"^# Proof object total steps\s*: (\S*)"),
+   "PRUNED":                       re.compile(r"^# Removed by relevancy pruning/SinE\s*: (\S*)"),
+   "CURR_PROCESSED_CLAUSES":       re.compile(r"^# Current number of processed clauses\s*: (\S*)"),
+   "CURR_PROCESSED_POS_OR_UC":     re.compile(r"^#\s*Positive orientable unit clauses\s*: (\S*)"),
+   "CURR_PROCESSED_POS_NOT_OR_UC": re.compile(r"^#\s*Positive unorientable unit clauses\s*: (\S*)"),
+   "CURR_PROCESSED_NEG_UC":        re.compile(r"^#\s*Negative unit clauses\s*: (\S*)"),
+   "CURR_PROCESSED_NON_UC":        re.compile(r"^#\s*Non-unit-clauses\s*: (\S*)")
 }
 
 def value(strval):
