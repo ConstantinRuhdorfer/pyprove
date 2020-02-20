@@ -17,7 +17,11 @@ PATS = {
    "CURR_PROCESSED_POS_OR_UC":     re.compile(r"^#\s*Positive orientable unit clauses\s*: (\S*)"),
    "CURR_PROCESSED_POS_NOT_OR_UC": re.compile(r"^#\s*Positive unorientable unit clauses\s*: (\S*)"),
    "CURR_PROCESSED_NEG_UC":        re.compile(r"^#\s*Negative unit clauses\s*: (\S*)"),
-   "CURR_PROCESSED_NON_UC":        re.compile(r"^#\s*Non-unit-clauses\s*: (\S*)")
+   "CURR_PROCESSED_NON_UC":        re.compile(r"^#\s*Non-unit-clauses\s*: (\S*)"),
+   "WATCHLIST_UNIT_CLAUSES":       re.compile(r"^#\s*Number of inserted watchlist non unit clauses\s*: (\S*)"),
+   "WATCHLIST_UNIT_CLAUSES":       re.compile(r"^#\s*Number of inserted watchlist unit clauses\s*: (\S*)"),
+   "WATCHLIST_CHECKS":             re.compile(r"^#\s*Number of watchlist checks\s*: (\S*)"),
+   "WATCHLIST_CHECKS_Unit":        re.compile(r"^#\s*Number of wl unit clause checks\s*: (\S*)"),
 }
 
 def value(strval):
